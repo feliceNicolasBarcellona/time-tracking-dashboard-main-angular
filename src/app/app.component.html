@@ -1,4 +1,87 @@
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-  Coded by <a href="#">Your Name Here</a>.
-</div>
+<main>
+  <div class="grid">
+    <div class="a">
+      <div class="card aside">
+        <div class="avatar">
+          <div class="avatar-content">
+            <img src="../assets/images/image-jeremy.png" alt="avatar-image" />
+            <div class="text">
+              <p class="label-for">Report for</p>
+              <p class="name">Jeremy Robson</p>
+            </div>
+          </div>
+        </div>
+        <ul class="period">
+          <li
+            [class.active]="selectedPeriod === 'Daily'"
+            (click)="setActive('Daily')"
+          >
+            Daily
+          </li>
+          <li
+            [class.active]="selectedPeriod === 'Weekly'"
+            (click)="setActive('Weekly')"
+          >
+            Weekly
+          </li>
+          <li
+            [class.active]="selectedPeriod === 'Monthly'"
+            (click)="setActive('Monthly')"
+          >
+            Monthly
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngFor="let item of data">
+      <div
+        class="card"
+        [ngClass]="{
+          work: item.title.toLowerCase() === 'work',
+          play: item.title.toLowerCase() === 'play',
+          study: item.title.toLowerCase() === 'study',
+          exercise: item.title.toLowerCase() === 'exercise',
+          social: item.title.toLowerCase() === 'social',
+          'self-care': item.title.toLowerCase() === 'self care'
+        }"
+      >
+        <div class="card-body">
+          <div class="title-container">
+            <p [style.fontWeight]="400">{{ item.title }}</p>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="hours-container">
+            <p class="current">
+              {{
+                item.timeframes[this.selectedPeriod.toLowerCase()].current
+              }}hrs
+            </p>
+            <p class="previous">
+              Last {{ periodLabel }} -
+              {{
+                item.timeframes[this.selectedPeriod.toLowerCase()].previous
+              }}hrs
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by
+    <a href="https://www.frontendmentor.io/profile/feliceNicolasBarcellona"
+      >Felice Nicolas Barcellona</a
+    >.
+  </p>
+</footer>
