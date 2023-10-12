@@ -34,43 +34,7 @@
       </div>
     </div>
     <div *ngFor="let item of data">
-      <div
-        class="card"
-        [ngClass]="{
-          work: item.title.toLowerCase() === 'work',
-          play: item.title.toLowerCase() === 'play',
-          study: item.title.toLowerCase() === 'study',
-          exercise: item.title.toLowerCase() === 'exercise',
-          social: item.title.toLowerCase() === 'social',
-          'self-care': item.title.toLowerCase() === 'self care'
-        }"
-      >
-        <div class="card-body">
-          <div class="title-container">
-            <p [style.fontWeight]="400">{{ item.title }}</p>
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                fill="#BBC0FF"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <div class="hours-container">
-            <p class="current">
-              {{
-                item.timeframes[this.selectedPeriod.toLowerCase()].current
-              }}hrs
-            </p>
-            <p class="previous">
-              Last {{ periodLabel }} -
-              {{
-                item.timeframes[this.selectedPeriod.toLowerCase()].previous
-              }}hrs
-            </p>
-          </div>
-        </div>
-      </div>
+      <app-activity-card [selectedPeriod]="selectedPeriod" [periodLabel]="periodLabel" [item]="item"></app-activity-card>
     </div>
   </div>
 </main>

@@ -24,3 +24,8 @@ export interface Monthly {
   current: number;
   previous: number;
 }
+
+export interface Item {
+  title: string;
+  timeframes: Timeframes;
+}

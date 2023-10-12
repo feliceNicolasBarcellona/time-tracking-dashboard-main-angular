@@ -93,92 +93,6 @@ main {
   color: hsl(0, 0%, 100%);
 }
 
-.work {
-  background-color: var(--light-red-work);
-  background-image: url("../assets/images/icon-work.svg");
-  background-repeat: no-repeat;
-  background-position: top -10px right 18px;
-}
-
-.play {
-  background-color: var(--soft-blue-play);
-  background-image: url("../assets/images/icon-play.svg");
-  background-repeat: no-repeat;
-  background-position: top -5px right 23px;
-}
-
-.study {
-  background-color: var(--light-red-study);
-  background-image: url("../assets/images/icon-study.svg");
-  background-repeat: no-repeat;
-  background-position: top -10px right 18px;
-}
-
-.exercise {
-  background-color: var(--lime-green-exercise);
-  background-image: url("../assets/images/icon-exercise.svg");
-  background-repeat: no-repeat;
-  background-position: top 0px right 18px;
-}
-
-.social {
-  background-color: var(--violet-social);
-  background-image: url("../assets/images/icon-social.svg");
-  background-repeat: no-repeat;
-  background-position: top -15px right 15px;
-}
-
-.self-care {
-  background-color: var(--soft-orange-self-care);
-  background-image: url("../assets/images/icon-self-care.svg");
-  background-repeat: no-repeat;
-  background-position: top -10px right 18px;
-}
-
-.card-body {
-  background-color: var(--dark-blue);
-  height: 81%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  border-radius: 13px;
-  padding: 28px 30px 0 32px;
-  color: hsl(0, 0%, 100%);
-  font-weight: 300;
-}
-
-svg:hover {
-  fill: #0f1cd7;
-  cursor: pointer;
-}
-
-.card-body:hover {
-  cursor: pointer;
-  background-color: hsl(236, 42%, 31%);
-}
-
-.title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hours-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.current {
-  font-size: 2.8645833333333335vw;
-  margin-top: 24px;
-}
-
-.previous {
-  font-size: 14.9px;
-  margin-top: 10px;
-  color: var(--pale-blue)
-}
-
 @media only screen and (max-width: 768px) {
   main {
     max-width: 375px;
@@ -201,11 +115,6 @@ svg:hover {
     grid-row-end: 2;
   }
 
-  .card-body {
-    height: 122px;
-    padding: 30px 27px 0 27px;
-  }
-
   .avatar {
     height: 67%;
     padding: 30px 30px;
@@ -226,22 +135,6 @@ svg:hover {
     justify-content: space-between;
     padding: 0 21px 0 35px;
     height: 33%;
-  }
-
-  .hours-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-  }
-
-  .current {
-    font-size: 30.5px;
-    margin: 0;
-  }
-  .previous {
-    margin: 0;
-    font-size: 15.3px;
   }
 
   .text {
