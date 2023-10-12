@@ -28,6 +28,11 @@
   align-items: center;
 }
 
+.title-container svg:hover {
+  cursor: pointer;
+  filter: brightness(0%) invert(100%);
+}
+
 .hours-container {
   display: flex;
   flex-direction: column;
