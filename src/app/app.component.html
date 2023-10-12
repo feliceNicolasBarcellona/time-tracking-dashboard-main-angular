@@ -3,26 +3,7 @@
     <div class="a">
       <div class="card aside">
         <app-avatar></app-avatar>
-        <ul class="period">
-          <li
-            [class.active]="selectedPeriod === 'Daily'"
-            (click)="setActive('Daily')"
-          >
-            Daily
-          </li>
-          <li
-            [class.active]="selectedPeriod === 'Weekly'"
-            (click)="setActive('Weekly')"
-          >
-            Weekly
-          </li>
-          <li
-            [class.active]="selectedPeriod === 'Monthly'"
-            (click)="setActive('Monthly')"
-          >
-            Monthly
-          </li>
-        </ul>
+        <app-period (setActive)="setActive($event)" [selectedPeriod]="selectedPeriod"></app-period>
       </div>
     </div>
     <div *ngFor="let item of data">

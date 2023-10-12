@@ -37,26 +37,6 @@ main {
   height: 100%;
 }
 
-.period {
-  list-style-type: none;
-  padding: 25px 0 0 34px;
-  color: var(--desaturated-blue);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 26%;
-  width: 100%;
-}
-
-.active {
-  color: hsl(0, 0%, 100%);
-}
-
-.period li:hover {
-  color: hsl(0, 0%, 100%);
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 768px) {
   main {
     max-width: 375px;
@@ -77,14 +57,6 @@ main {
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 2;
-  }
-
-  .period {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 21px 0 35px;
-    height: 33%;
   }
 
 }

@@ -1,0 +1,29 @@
+.period {
+  list-style-type: none;
+  padding: 25px 0 0 34px;
+  color: var(--desaturated-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 26%;
+  width: 100%;
+}
+
+.period li:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.active {
+  color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .period {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 21px 0 35px;
+    height: 33%;
+  }
+}

@@ -1,0 +1,20 @@
+<ul class="period">
+  <li
+    [class.active]="selectedPeriod === 'Daily'"
+    (click)="setActive.emit('Daily')"
+  >
+    Daily
+  </li>
+  <li
+    [class.active]="selectedPeriod === 'Weekly'"
+    (click)="setActive.emit('Weekly')"
+  >
+    Weekly
+  </li>
+  <li
+    [class.active]="selectedPeriod === 'Monthly'"
+    (click)="setActive.emit('Monthly')"
+  >
+    Monthly
+  </li>
+</ul>
